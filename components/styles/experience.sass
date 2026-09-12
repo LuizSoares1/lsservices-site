@@ -1,0 +1,105 @@
+.experience
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.experience-tittle
+  padding: 50px 0
+  text-align: center
+
+  h1
+    font-family: var(--font-display)
+    font-size: 2.4rem
+    font-weight: 700
+    text-align: center
+
+.experience-timeline
+  width: 100%
+  max-width: 760px
+  position: relative
+  display: flex
+  flex-direction: column
+
+  &::before
+    content: ''
+    position: absolute
+    left: 7px
+    top: 8px
+    bottom: 8px
+    width: 1px
+    background: linear-gradient(180deg, var(--gold), var(--accent))
+    opacity: 0.5
+
+.experience-item
+  display: flex
+  gap: 24px
+  padding-bottom: 44px
+
+  &:last-child
+    padding-bottom: 0
+
+.experience-marker
+  flex-shrink: 0
+  width: 15px
+  padding-top: 26px
+
+.experience-dot
+  display: block
+  width: 15px
+  height: 15px
+  border-radius: 50%
+  background: var(--bg-void)
+  border: 2px solid var(--accent)
+  box-shadow: 0 0 0 4px var(--accent-soft-2)
+
+.experience-content
+  display: flex
+  flex-direction: column
+  gap: 4px
+  padding: 20px 24px
+  border-radius: 16px
+  border: var(--glass-border)
+  background: var(--glass-bg)
+  backdrop-filter: var(--glass-blur)
+  -webkit-backdrop-filter: var(--glass-blur)
+  box-shadow: var(--glass-shadow)
+  flex: 1
+
+  h3
+    font-family: var(--font-display)
+    font-weight: 700
+    font-size: 1.15rem
+    color: var(--text)
+    margin-top: 2px
+
+  p
+    color: var(--text-muted)
+    line-height: 1.65
+    margin-top: 8px
+    font-size: 0.95rem
+
+.experience-dates
+  font-family: var(--font-mono)
+  font-size: 0.78rem
+  color: var(--gold)
+  letter-spacing: 0.02em
+
+.experience-company
+  font-family: var(--font-body)
+  font-size: 0.9rem
+  color: var(--text-faint)
+
+@media (max-width: 600px)
+  .experience-tittle
+    h1
+      font-size: 2rem
+
+  .experience-content
+    h3
+      font-size: 1.05rem
+
+@media (max-width: 400px)
+  .experience-tittle
+    h1
+      font-size: 1.7rem

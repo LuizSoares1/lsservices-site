@@ -1,0 +1,54 @@
+.main-class-componente
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  gap: 70px
+  width: 100%
+  padding-top: 40px
+
+@media (max-width: 760px)
+  .main-class-componente
+    padding-top: 108px
+
+@media (min-width: 761px)
+  .main-class-componente
+    padding-top: 128px
+
+.section
+  min-height: 100vh
+  width: min(1200px, calc(100% - 40px))
+  max-width: 1200px
+  margin: 0 auto
+
+@media (max-width: 760px)
+  .section
+    scroll-margin-top: 98px
+
+@media (min-width: 761px)
+  .section
+    scroll-margin-top: 108px
+
+#home
+  position: relative
+  max-width: none
+  width: 100%
+  margin: -128px 0 0 0
+
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: -1px
+    height: 140px
+    background: linear-gradient(180deg, rgba(10, 2, 16, 0), rgba(10, 2, 16, 0.35) 45%, rgba(10, 2, 16, 0.9) 100%)
+    pointer-events: none
+
+@media (max-width: 760px)
+  #home
+    margin-top: -108px
+    min-height: 100vh !important
+
+#contact
+  margin-bottom: 20px

@@ -1,0 +1,244 @@
+.skills
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 100%
+  max-width: 1200px
+
+#skills
+  display: flex
+  justify-content: center
+
+.skills-tittle
+  padding: 50px 0
+  text-align: center
+
+  h1
+    font-family: var(--font-display)
+    font-size: 2.4rem
+    font-weight: 700
+    text-align: center
+
+  h2
+    font-family: var(--font-display)
+    font-size: 1.5rem
+    font-weight: 700
+    text-align: center
+
+.skills-embedded
+  margin-top: 30px
+
+  .skills-tittle
+    padding: 0 0 24px 0
+
+  .skills-container
+    background: transparent
+    border: none
+    padding: 0
+    gap: 36px
+
+.skills-container
+  display: flex
+  flex-direction: column
+  justify-content: center
+  gap: 32px
+  overflow: visible
+  background: var(--glass-bg)
+  backdrop-filter: var(--glass-blur)
+  -webkit-backdrop-filter: var(--glass-blur)
+  border: var(--glass-border)
+  box-shadow: var(--glass-shadow)
+  border-radius: 24px
+  padding: 28px 28px 32px
+  width: 100%
+  max-width: 1200px
+
+.skills-groups
+  h2
+    font-family: var(--font-display)
+    font-size: 1.3rem
+    font-weight: 700
+    margin: 0 0 30px 0
+    color: var(--text-muted)
+
+.skills-groups-subtitle
+  font-family: var(--font-body)
+  font-size: 0.8rem
+  color: var(--text-faint)
+
+.skills-flex-daddy
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  max-width: 100%
+
+.skills-flex
+  width: 100%
+  display: grid
+  grid-template-columns: repeat(4, minmax(130px, 1fr))
+  gap: 16px
+  justify-content: center
+
+.skills-card
+  display: flex
+  flex-direction: column
+  width: 100%
+  min-height: 148px
+  justify-content: center
+  align-items: center
+  gap: 10px
+  border-radius: 16px
+  border: var(--glass-border)
+  background: var(--glass-bg)
+  backdrop-filter: var(--glass-blur)
+  -webkit-backdrop-filter: var(--glass-blur)
+  box-shadow: var(--glass-shadow)
+  color: var(--text-muted)
+  will-change: transform
+  transform-style: preserve-3d
+
+  svg
+    font-size: 3.2rem
+    pointer-events: none
+
+.skills-info
+  h3
+    font-weight: 500
+    font-size: 0.95rem
+    pointer-events: none
+
+/* ========================= */
+/* CORES DOS ÍCONES */
+/* ========================= */
+
+#node
+  svg
+    color: #83CD29
+
+#react
+  svg
+    color: #66DBFB
+
+#nextjs
+  svg
+    color: #F4F4F4
+
+#scsssass
+  svg
+    color: #CE679A
+
+#csharp
+  svg
+    color: #A27ADD
+
+#java
+  svg
+    color: #1565C0
+
+#php
+  svg
+    color: #7B7FB5
+
+#laravel
+  svg
+    color: #FF3224
+
+#mysql
+  svg
+    color: #4A7DA4
+
+#apache
+  svg
+    color: #D22128
+
+#windowsserver
+  svg
+    color: #14B8A6
+
+#vultr
+  svg
+    color: #007BFC
+
+#vtex
+  svg
+    color: #14B8A6
+
+#git
+  svg
+    color: #F1502F
+
+#github
+  svg
+    color: #F4F4F4
+
+#linux
+  svg
+    color: #FCC624
+
+#windows
+  svg
+    color: #00A4EF
+
+#mac
+  svg
+    color: #fff
+
+#excel
+  svg
+    color: #217346
+
+#word
+  svg
+    color: #2B579A
+
+#powerpoint
+  svg
+    color: #B7472A
+
+#claude
+  svg
+    color: #D97757
+#gpt
+  svg
+    color: #fff
+
+#gemini
+  svg
+    color: #3286FF
+
+/* ========================= */
+/* MEDIA QUERIES */
+/* ========================= */
+
+@media (max-width: 900px)
+  .skills-flex
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+
+@media (max-width: 600px)
+  .skills-tittle
+    h1
+      font-size: 2rem
+
+  .skills-container
+    padding: 28px
+
+  .skills-flex
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+
+@media (max-width: 400px)
+  .skills-flex
+    grid-template-columns: 1fr
+
+  .skills-tittle
+    h1
+      font-size: 1.7rem
+
+    .skills-groups
+      h2
+        font-size: 1.1rem
+
+    .skills-info
+      h3
+        font-size: 0.85rem

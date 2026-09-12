@@ -1,0 +1,36 @@
+.site-footer
+  width: 100%
+  display: flex
+  justify-content: center
+  padding: 0 20px 32px
+
+.site-footer__inner
+  width: min(1200px, 100%)
+  border-top: 1px solid rgba(255, 255, 255, 0.08)
+  padding-top: 22px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 16px
+  color: var(--text-muted)
+  font-family: var(--font-mono)
+  font-size: 0.82rem
+
+.site-footer__links
+  display: flex
+  align-items: center
+  gap: 18px
+  flex-wrap: wrap
+
+  a
+    color: var(--text-muted)
+    text-decoration: none
+    transition: color 0.25s ease
+
+    &:hover
+      color: var(--text)
+
+@media (max-width: 760px)
+  .site-footer__inner
+    flex-direction: column
+    text-align: center

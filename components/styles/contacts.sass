@@ -1,0 +1,186 @@
+.contacts-child
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-bottom: 60px
+
+.contacts-container
+  max-width: 1200px
+  width: 100%
+  background: var(--glass-bg)
+  backdrop-filter: var(--glass-blur)
+  -webkit-backdrop-filter: var(--glass-blur)
+  border: var(--glass-border)
+  box-shadow: var(--glass-shadow)
+  border-radius: 24px
+  padding: 40px
+
+.contacts-container-child
+  margin: 0 auto
+  display: flex
+  justify-content: space-between
+  gap: 15px
+  flex-wrap: wrap
+
+.contacts-tittle
+  padding: 50px 0
+  text-align: center
+
+  h1
+    font-family: var(--font-display)
+    font-size: 2.4rem
+    font-weight: 700
+    text-align: center
+
+.contacts-left
+  flex: 1
+  min-width: 250px
+
+  h1
+    margin: 0 0 8px 0
+    font-family: var(--font-display)
+    font-weight: 700
+    font-size: 1.5em
+
+  h3
+    font-size: 1.05em
+    font-weight: 400
+    color: var(--text-muted)
+    margin-bottom: 24px
+
+  .contact-info, .social-media
+    margin-bottom: 20px
+
+.icons
+  display: flex
+  gap: 18px
+  font-size: 26px
+
+  a
+    color: inherit
+    transition: transform 0.3s var(--ease-premium), opacity 0.3s ease
+    display: inline-flex
+
+    &:hover
+      transform: translateY(-3px)
+
+#instagram
+  color: #FB1289
+
+#facebook
+  color: #0866FF
+
+#linkedin
+  color: #0A66C2
+
+#telegram
+  color: #25A2DF
+
+#whats-app
+  color: #0CC143
+
+#github
+  color: var(--text)
+
+.contacts-right
+  flex: 1
+  min-width: 250px
+
+.contact-form
+  display: flex
+  flex-direction: column
+  gap: 16px
+
+  label
+    font-family: var(--font-mono)
+    font-size: 0.8rem
+    color: var(--text-faint)
+    margin-bottom: -8px
+
+  input, textarea
+    padding: 12px 14px
+    border-radius: 8px
+    border: 1px solid var(--border-hairline-strong)
+    background: rgba(255, 255, 255, 0.02)
+    color: var(--text)
+    font-size: 14px
+    font-family: var(--font-body)
+    resize: none
+    transition: border-color 0.3s ease
+
+    &:focus
+      outline: none
+      border-color: var(--accent)
+
+  textarea
+    height: 90px
+
+  .send-btn
+    padding: 12px
+    background: transparent
+    color: var(--text)
+    font-family: var(--font-mono)
+    font-weight: 500
+    border-radius: 8px
+    border: 1px solid var(--border-hairline-strong)
+    cursor: pointer
+    transition: all 0.3s ease
+
+    &:hover
+      border-color: var(--accent)
+      background: var(--accent-soft-2)
+
+.title-right
+  margin: 0 0 24px 0
+  h1
+    font-family: var(--font-display)
+    font-weight: 700
+    font-size: 1.5em
+    text-align: center
+
+.spanResult
+  height: 20px
+  width: 100%
+  text-align: center
+  color: var(--text-muted)
+  margin-top: 20px
+  font-family: var(--font-mono)
+  font-size: 0.85rem
+
+@media (max-width:600px)
+  .contacts-tittle
+    h1
+      font-size: 2rem
+
+  .contacts-left
+    h1
+      font-size: 1.3rem
+    h3
+      font-size: 1rem
+
+  .title-right
+    h1
+      font-size: 1.3em
+
+@media (max-width:550px)
+  .contacts-container
+    padding: 26px
+
+@media (max-width:500px)
+  .contacts-left
+    h1
+      font-size: 1.2rem
+
+  .social-media
+    h3
+      font-size: 0.95rem
+
+  .title-right
+    h1
+      font-size: 1.2em
+
+@media (max-width:400px)
+  .contacts-tittle
+    h1
+      font-size: 1.8rem

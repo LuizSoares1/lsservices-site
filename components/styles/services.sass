@@ -1,0 +1,76 @@
+.services
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.services-tittle
+  padding: 50px 0
+  text-align: center
+
+  h1
+    font-family: var(--font-display)
+    font-size: 2.4rem
+    font-weight: 700
+    text-align: center
+
+.services-grid
+  width: 100%
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 24px
+
+.service-card
+  display: flex
+  flex-direction: column
+  gap: 14px
+  padding: 32px 28px
+  border-radius: 20px
+  border: var(--glass-border)
+  background: var(--glass-bg)
+  backdrop-filter: var(--glass-blur)
+  -webkit-backdrop-filter: var(--glass-blur)
+  box-shadow: var(--glass-shadow)
+  transition: border-color 0.4s ease
+
+  &:hover
+    border-color: var(--accent-soft)
+
+  h3
+    font-family: var(--font-display)
+    font-weight: 700
+    font-size: 1.05rem
+    color: var(--text)
+
+  p
+    color: var(--text-muted)
+    line-height: 1.6
+    font-size: 0.92rem
+
+.service-icon
+  width: 52px
+  height: 52px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 14px
+  background: var(--accent-soft-2)
+  color: var(--accent)
+  font-size: 1.4rem
+
+@media (max-width: 900px)
+  .services-grid
+    grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 600px)
+  .services-tittle
+    h1
+      font-size: 2rem
+
+  .services-grid
+    grid-template-columns: 1fr
+
+@media (max-width: 400px)
+  .services-tittle
+    h1
+      font-size: 1.7rem

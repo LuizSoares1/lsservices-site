@@ -1,0 +1,205 @@
+.home-hero
+    position: relative
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 50px
+    width: 100%
+    min-height: 100vh
+    padding: 150px 50px 60px
+    background: radial-gradient(circle at 20% 20%, var(--bg-surface-alt), var(--bg-void) 70%)
+
+.matrix-canvas
+    position: absolute
+    top: -10%
+    left: 0
+    width: 100%
+    height: 120%
+    z-index: 1
+    opacity: 0.16
+    color: var(--text)
+    will-change: transform
+
+.home-photo,
+.home-info
+    position: relative
+    z-index: 1
+
+.home-photo-child
+    width: 100%
+    max-width: 380px
+    aspect-ratio: 1 / 1
+    overflow: hidden
+    border-radius: 50%
+    border: 1px solid var(--border-hairline-strong)
+    position: relative
+    will-change: transform
+
+    &::after
+        content: ''
+        position: absolute
+        inset: 0
+        border-radius: 50%
+        box-shadow: inset 0 0 0 1px var(--accent-soft)
+        opacity: 0
+        transition: opacity 0.5s ease
+
+    &:hover::after
+        opacity: 1
+
+.home-photo-img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.home-subtitle
+    h3
+        font-weight: 400
+        font-size: 18px
+        color: var(--text-muted)
+        font-family: var(--font-body)
+
+.home-info
+    max-width: 600px
+
+.home-title-h1
+    font-family: var(--font-display)
+    font-size: 1.9rem
+    font-weight: 700
+    line-height: 1.5rem
+    color: var(--text-muted)
+
+.home-title-h2
+    font-family: var(--font-display)
+    font-size: 2.6rem
+    font-weight: 700
+    line-height: 1.3
+    background: linear-gradient(90deg, var(--text), var(--accent) 70%)
+    -webkit-background-clip: text
+    background-clip: text
+    color: transparent
+
+.home-link
+    display: flex
+    margin-top: 40px
+
+.home-child
+    display: flex
+    justify-content: center
+    gap: 12px
+    flex-wrap: wrap
+
+.home-child-link
+    position: relative
+    flex: 1
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 8px
+    padding: 12px 22px
+    color: var(--text)
+    min-width: 170px
+    text-decoration: none
+    border-radius: 12px
+    border: var(--glass-border)
+    background: var(--glass-bg)
+    backdrop-filter: var(--glass-blur)
+    -webkit-backdrop-filter: var(--glass-blur)
+    box-shadow: var(--glass-shadow)
+    overflow: hidden
+    transition: border-color 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease
+    font-size: 15px
+    font-family: var(--font-mono)
+
+    &::before
+        content: ''
+        position: absolute
+        inset: 0
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 42%, rgba(255, 255, 255, 0.02))
+        pointer-events: none
+
+    &:hover
+        border-color: rgba(255, 255, 255, 0.2)
+        box-shadow: 0 14px 28px -14px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.22)
+        transform: translateY(-2px)
+
+.home-child-link--primary
+    background: linear-gradient(135deg, rgba(230, 25, 192, 0.14), rgba(255, 255, 255, 0.06) 48%, rgba(98, 75, 255, 0.12))
+    border-color: rgba(230, 25, 192, 0.4)
+    box-shadow: 0 12px 24px -18px rgba(230, 25, 192, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.2)
+
+    &:hover
+        border-color: rgba(255, 255, 255, 0.3)
+        box-shadow: 0 16px 28px -18px rgba(230, 25, 192, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.2)
+        transform: translateY(-2px) scale(1.01)
+
+.home-child-link--secondary
+    opacity: 0.9
+
+@media (min-width: 1100px)
+    .home-subtitle
+        min-width: 540px !important
+        max-width: 600px
+
+@media (min-width: 650px)
+    .home-subtitle
+        min-width: 485px
+        max-width: 600px
+
+@media (min-width: 601px)
+    .home-title-h2
+        min-height: 52px
+
+@media (max-width: 1051px)
+    .home-hero
+        flex-direction: column
+        flex-wrap: nowrap
+        align-items: center
+        text-align: center
+        justify-content: center
+
+    .home-link
+        display: flex
+        margin-top: 40px
+        justify-content: center
+        align-items: center
+
+    .home-title-h1
+        font-size: clamp(1.4rem, 6vw, 1.9rem)
+
+@media (max-width: 900px)
+    .home-photo-child
+        max-width: 300px
+
+@media (max-width: 760px)
+    .home-hero
+        min-height: 100vh !important
+        padding: 116px 24px 70px
+        justify-content: center
+
+@media (max-width: 600px)
+    .home-photo-child
+        max-width: 250px
+
+    .home-subtitle
+        h3
+            font-size: 15px
+
+    .home-title-h1
+        font-size: 1.2rem
+
+    .home-title-h2
+        font-size: 1.7rem
+
+    .home-child-link
+        padding: 10px 15px
+        font-size: 13px
+
+@media (max-width: 500px)
+    .home-photo-child
+        max-width: 200px
+
+@media (max-width: 400px)
+    .home-photo-child
+        max-width: 170px
