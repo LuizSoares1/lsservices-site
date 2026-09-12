@@ -16,7 +16,7 @@ const AboutMe: React.FC = () => {
     <div className="about">
       <div className="about-title">
         <span className="section-eyebrow" aria-hidden="true"></span>
-        <h1>About Me</h1>
+        <h1>Sobre Mim</h1>
       </div>
 
       <p className="about-lead">

@@ -69,7 +69,7 @@ const Contacts: React.FC = () => {
     <div className="contacts-child">
       <div className="contacts-tittle">
         <span className="section-eyebrow" aria-hidden="true"></span>
-        <h1>Contact</h1>
+        <h1>Contatos</h1>
       </div>
       <div className="contacts-container">
         <div className="contacts-container-child">

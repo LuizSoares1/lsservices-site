@@ -56,7 +56,7 @@ const Services: React.FC = () => {
     <div className="services">
       <div className="services-tittle">
         <span className="section-eyebrow" aria-hidden="true"></span>
-        <h1>Services</h1>
+        <h1>Serviços</h1>
       </div>
       <div className="services-grid">
         {services.map((service, i) => (

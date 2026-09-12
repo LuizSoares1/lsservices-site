@@ -40,7 +40,7 @@ const Experience: React.FC = () => {
     <div className="experience">
       <div className="experience-tittle">
         <span className="section-eyebrow" aria-hidden="true"></span>
-        <h1>Experience</h1>
+        <h1>Experiências Profissionais</h1>
       </div>
       <div className="experience-timeline">
         {experiences.map((exp, i) => (

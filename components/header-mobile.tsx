@@ -6,12 +6,12 @@ import "./styles/header-mobile.sass";
 
 const nav = [
   { name: "Home", target: "home" },
-  { name: "About Me", target: "about" },
+  { name: "Sobre Mim", target: "about" },
   { name: "Portfolio", target: "portfolio" },
-  { name: "Skills", target: "skills" },
-  { name: "Services", target: "services" },
-  { name: "Experience", target: "experience" },
-  { name: "Contact", target: "contact" },
+  { name: "Habilidades", target: "skills" },
+  { name: "Serviços", target: "services" },
+  { name: "Experiências", target: "experience" },
+  { name: "Contatos", target: "contact" },
 ];
 
 const HeaderMobile: React.FC = () => {
