@@ -7,14 +7,14 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const projects = [
   {
-    id: "cadastro-funcionario",
-    name: "Cadastro Funcionário",
-    link: "https://github.com/LuizSoares1/cadastro-funcionarios-frontend",
+    id: "painelvenda",
+    name: "Painel Administrativo/Vendas",
+    link: "https://github.com/LuizSoares1/erick-camisas-admin",
   },
   {
-    id: "vitrini",
-    name: "Vitrini de Produtos",
-    link: "https://github.com/LuizSoares1/Vitrini-Challenge",
+    id: "hotel",
+    name: "Hotel",
+    link: "https://github.com/LuizSoares1/hotel",
   },
   {
     id: "pass-gen",
