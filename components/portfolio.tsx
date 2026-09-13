@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import "./styles/portfolio.sass";
-import { FiExternalLink } from "react-icons/fi";
+import { FiArrowUpRight } from "react-icons/fi";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const projects = [
@@ -30,42 +30,52 @@ const projects = [
 
 type ProjectItem = { id: string; name: string; link: string };
 
-const ProjectCard: React.FC<{ project: ProjectItem }> = ({ project }) => {
+const ProjectCard: React.FC<{ project: ProjectItem; index: number }> = ({
+  project,
+  index,
+}) => {
   const cardRef = useRef<HTMLAnchorElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: cardRef,
     offset: ["start end", "end start"],
   });
   // a imagem se move um pouco mais devagar que o card, criando profundidade
-  const imgY = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
+  const imgY = useTransform(scrollYProgress, [0, 1], ["-6%", "6%"]);
 
   return (
-    <a
+    <motion.a
       href={project.link}
       className="project-card"
       ref={cardRef}
       target="_blank"
       rel="noopener noreferrer"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.55, delay: (index % 2) * 0.1, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className="project-preview">
         <motion.img
           src={`/${project.id}.png`}
           alt={project.name}
-          style={{ y: imgY, scale: 1.15 }}
+          style={{ y: imgY, scale: 1.12 }}
         />
+        <div className="project-overlay">
+          <span className="project-overlay-btn">
+            Ver projeto <FiArrowUpRight />
+          </span>
+        </div>
       </div>
       <div className="project-info">
-        <div className="bar-and-link">
-          <div className="divider"></div>
-          <div className="link">
-            <FiExternalLink />
-          </div>
+        <div className="project-info-text">
+          <span className="project-index">{String(index + 1).padStart(2, "0")}</span>
+          <span className="project-title">{project.name}</span>
         </div>
-        <div className="project-title">
-          <span>{project.name}</span>
-        </div>
+        <span className="project-link">
+          <FiArrowUpRight />
+        </span>
       </div>
-    </a>
+    </motion.a>
   );
 };
 
@@ -81,8 +91,8 @@ const Portfolio: React.FC = () => {
           <h2>Principais projetos</h2>
         </div>
         <div className="portfolio-grid">
-          {projects.map((project) => (
-            <ProjectCard project={project} key={project.id} />
+          {projects.map((project, i) => (
+            <ProjectCard project={project} index={i} key={project.id} />
           ))}
         </div>
       </div>
